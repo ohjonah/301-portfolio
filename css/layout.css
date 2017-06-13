@@ -1,3 +1,19 @@
+header {
+  margin-bottom: 1em;
+}
+
 nav {
   display: none;
+}
+
+/*************************
+          Carousel
+**************************/
+
+.hero-container {
+  width: 100%;
+}
+
+.hero-container img {
+  width: 100%;
 }
