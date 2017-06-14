@@ -49,6 +49,41 @@ nav {
   text-align: center;
 }
 
+/*************************
+          Projects
+**************************/
+
+main > h2 {
+  margin: 1em 0.75em;
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+.template {
+  max-width: 100%;
+}
+
+.template .project-container {
+  width: 15em;
+  height: 15em;
+  position: relative;
+  background-color: grey;
+}
+
+.template .project-title-overlay {
+  width: 100%;
+  padding: 2em 0 2em 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: rgba(200, 54, 54, 0.5);
+}
+
+.project-title-overlay btn {
+  border-radius: 3px;
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 640px) {
 
   header span.icon-menu {
