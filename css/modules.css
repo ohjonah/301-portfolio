@@ -32,9 +32,9 @@
 
 .hero-textoverlay {
   position: absolute;
-  top: 3em;
-  left: 3em;
-  right: 8em;
+  top: 2em;
+  left: 2em;
+  right: 3em;
   border-radius: 5px;
   border: 1px black solid;
   background: rgba(200, 54, 54, 0.5);
@@ -42,4 +42,5 @@
 
 .hero-textoverlay p {
   padding: .3em .3em;
+  text-align: center;
 }
