@@ -1,7 +1,7 @@
 'use strict';
 
 $('.icon-menu').click(function() {
-  $('nav').show().toggle();
+  $('nav').show();
 });
 
 function Project(projectName, description, siteURL, repoURL) {
