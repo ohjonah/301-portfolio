@@ -5,3 +5,8 @@ html {
 header {
   background-color: grey;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
