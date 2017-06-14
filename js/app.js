@@ -1,5 +1,9 @@
 'use strict';
 
+$('.icon-menu').click(function() {
+  $('nav').show().toggle();
+});
+
 function Project(projectName, description, siteURL, repoURL) {
   this.projectName = projectName;
   this.description = description;
