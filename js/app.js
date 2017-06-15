@@ -1,16 +1,32 @@
 'use strict';
 
-$('.icon-menu').click(function() {
-  $('nav').show();
+$('.icon-menu').on('click', function() {
+  $('nav').toggle();
 });
 
-function Project(projectName, description, siteURL, repoURL) {
-  this.projectName = projectName;
-  this.description = description;
-  this.siteURL = siteURL;
-  this.repoURL = repoURL;
+var projects = [];
+
+function Project(rawDataObj) {
+  this.projectName = rawDataObj.projectName;
+  this.description = rawDataObj.description;
+  this.siteUrl = rawDataObj.siteUrl;
+  this.repoUrl = rawDataObj.repoUrl;
 }
 
-var test = new Project('States Game', 'Lorem Ipsum Text', 'www.google.com', 'www.bing.com');
+Project.prototype.toHtml = function() {
+  var $newProject = $('article.template').clone();
 
-console.log(test);
+  $newProject.removeClass('template');
+
+  $newProject.find('.project-title-overlay h2').html(this.projectName);
+
+  return $newProject;
+};
+
+rawData.forEach(function(projectObject) {
+  projects.push(new Project(projectObject));
+});
+
+projects.forEach(function(project) {
+  $('#projects').append(project.toHtml());
+});
