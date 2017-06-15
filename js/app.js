@@ -1,7 +1,7 @@
 'use strict';
 
-$('.icon-menu').click(function() {
-  $('nav').show();
+$('.icon-menu').on('click', function() {
+  $('nav').toggle();
 });
 
 var projects = [];
