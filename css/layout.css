@@ -9,6 +9,15 @@ main {
 .template {
   display: none;
 }
+
+nav li {
+  display: inline-block;
+}
+
+/*nav {
+  float: right;
+}*/
+
 /*************************
           Carousel
 **************************/
