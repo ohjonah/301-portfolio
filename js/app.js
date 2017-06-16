@@ -1,8 +1,5 @@
 'use strict';
 
-
-
-
 var projects = [];
 
 function Project(rawDataObj) {
@@ -13,13 +10,9 @@ function Project(rawDataObj) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-
-  $newProject.removeClass('template');
-
-  $newProject.find('.project-title-overlay h2').html(this.projectName);
-
-  return $newProject;
+  var template = $('#project-overlay').html();
+  var templateRender = Handlebars.compile(template);
+  return templateRender(this);
 };
 
 rawData.forEach(function(projectObject) {

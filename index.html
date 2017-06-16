@@ -13,8 +13,14 @@
     <link rel="stylesheet" href="./css/modules.css">
 
     <script id="project-overlay" type="text/x-handlebars-template">
-      <h2>{{ projectName }}</h2>
-      <button>Learn More</button>
+      <article class="tab-content projects">
+        <div class="project-container">
+          <div class="project-title-overlay">
+            <h2>{{ projectName }}</h2>
+            <button>Learn More</button>
+          </div>
+        </div>
+      </article>
     </script>
 </script>
   </head>
@@ -46,13 +52,7 @@
       </section>
 
       <h2 class="tab-content projects">Projects</h2>
-      <section id="projects">
-        <article class="template tab-content projects">
-          <div class="project-container">
-            <div id="project-title-overlay"></div>
-          </div>
-        </article>
-      </section>
+      <section id="projects"></section>
 
       <div class="clearfix"></div>
 
