@@ -14,9 +14,10 @@ nav li {
   display: inline-block;
 }
 
-/*nav {
+nav ul {
+  display: inline;
   float: right;
-}*/
+}
 
 /*************************
           Carousel
