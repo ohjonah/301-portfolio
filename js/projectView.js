@@ -11,4 +11,13 @@ projectView.handleMainNav = function() {
   });
 };
 
-projectView.handleMainNav();
+function hamburgerClick() {
+  $('.icon-menu').on('click', function() {
+    $('nav').toggleClass('toggle');
+  });
+}
+
+$(document).ready(function() {
+  hamburgerClick();
+  projectView.handleMainNav();
+});

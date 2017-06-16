@@ -19,6 +19,9 @@ nav ul {
   float: right;
 }
 
+.toggle {
+  display: block;
+}
 /*************************
           Carousel
 **************************/
