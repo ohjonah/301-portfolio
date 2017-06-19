@@ -17,7 +17,20 @@ function hamburgerClick() {
   });
 }
 
-$(document).ready(function() {
+projectView.initNewProjectPage = function() {
+  $('.tab-content').show();
+
+  $('#export-field').hide();
+  $('project-json').on('focus', function() {
+    this.select();
+  });
+
+  $('#new-form').on('change', 'input, textarea', projectView.create);
+}
+
+
+
+projectView.initIndexPage = function() {
   hamburgerClick();
   projectView.handleMainNav();
-});
+}
