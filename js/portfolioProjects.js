@@ -18,5 +18,11 @@ var rawData = [
     description: 'Cupcake ipsum dolor sit. Amet I love liquorice jujubes pudding croissant I love pudding. Apple pie macaroon toffee jujubes pie tart cookie applicake caramels. Halvah macaroon I love lollipop.',
     siteUrl: 'www.spectacles.com',
     repoUrl: 'www.oculus.com/rift/'
+  },
+  {
+    projectName: 'Portfolio Site',
+    description: 'Kinfolk mustache banjo taiyaki, single-origin coffee cornhole cliche gentrify yuccie cronut. Chartreuse four loko tbh selvage bicycle rights hashtag irony live-edge la croix cronut paleo twee. Heirloom microdosing vegan raclette photo booth swag copper mug franzen coloring book raw denim messenger bag. ',
+    siteUrl: 'www.amazon.com',
+    repoUrl: 'www.walmart.com'
   }
 ];
