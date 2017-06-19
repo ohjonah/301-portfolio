@@ -43,8 +43,8 @@
     </header>
 
     <main class="clearfix">
+      <h2 class="tab-content projects">Projects</h2>
       <section id="write" class="tab-content">
-        <h1>New Project</h1>
         <form action="#" id="new-form">
           <label>
             <input type="text" id="project-title" placeholder="Project Title" required>
@@ -59,10 +59,15 @@
         </form>
       </section>
 
-      <h2 class="tab-content projects">Projects</h2>
       <section id="projects"></section>
-
       <div class="clearfix"></div>
+
+      <section id="project-export">
+        <label id="export-field" for="project-json">
+          <input type="text" readonly id="project-json">
+          When finalized, copy the above JSON and paste into your JSON file.
+        </label>
+      </section>
     </main>
 
     <footer>
@@ -73,7 +78,8 @@
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-    <script src="./js/portfolioProjects.js"></script>
+    <script src="./vendor/scripts/marked.js"></script>
+    <script src="./vendor/scripts/highlight.js"></script>
     <script src="./js/projectView.js"></script>
     <script src="./js/app.js"></script>
   </body>
