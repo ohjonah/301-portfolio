@@ -47,9 +47,9 @@
       <section id="write" class="tab-content">
         <form action="#" id="new-form">
           <label>
-            <input type="text" id="project-title" placeholder="Project Title" required>
+            <input type="text" id="projectName" placeholder="Project Title" required>
           </label>
-          <textarea id="project-description" row="8" cols="40" required></textarea>
+          <textarea id="project-description" row="8" cols="40">Project Description Here</textarea>
           <label>
             <input type="text" id="project-url" placeholder="Project URL">
           </label>
@@ -82,5 +82,8 @@
     <script src="./vendor/scripts/highlight.js"></script>
     <script src="./js/projectView.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+      projectView.initNewProjectPage();
+    </script>
   </body>
 </html>

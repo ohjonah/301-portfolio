@@ -28,6 +28,26 @@ projectView.initNewProjectPage = function() {
   $('#new-form').on('change', 'input, textarea', projectView.create);
 }
 
+projectView.create = function() {
+  var project;
+  $('#projects').empty();
+
+  project = new Project({
+    projectName: $('#project-title').val(),
+    description: $('#project-description').val(),
+    siteUrl: $('#project-url').val(),
+    siteRepo: $('#project-repo').val()
+  });
+
+  $('#projects').append(project.toHtml());
+
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+  $('#export-field').show();
+  $('#project-json').val(JSON.stringify(project) + ',');
+}
 
 
 projectView.initIndexPage = function() {
