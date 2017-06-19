@@ -15,9 +15,11 @@ Project.prototype.toHtml = function() {
   return templateRender(this);
 };
 
-rawData.forEach(function(projectObject) {
-  projects.push(new Project(projectObject));
-});
+if (typeof rawData !== 'undefined') {
+  rawData.forEach(function(projectObject) {
+    projects.push(new Project(projectObject));
+  });
+}
 
 projects.forEach(function(project) {
   $('#projects').append(project.toHtml());
