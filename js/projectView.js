@@ -39,6 +39,8 @@ projectView.create = function() {
     siteRepo: $('#project-repo').val()
   });
 
+  console.log(this.siteRepo);
+
   $('#projects').append(project.toHtml());
 
   $('pre code').each(function(i, block) {
