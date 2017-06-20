@@ -11,6 +11,8 @@ a {
   color: black;
 }
 
-.clearfix {
-  clear:both;
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
