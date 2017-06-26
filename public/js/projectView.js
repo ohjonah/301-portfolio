@@ -1,58 +1,64 @@
 'use strict';
+var app = app || {};
 
-var projectView = {};
+(function(module) {
 
-projectView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function() {
-    $('.hero-container').hide();
-    $('.tab-content').hide();
-    $('.' + $(this).data('content')).show();
-    $('.template').hide();
-  });
-};
+  var projectView = {};
 
-function hamburgerClick() {
-  $('.icon-menu').on('click', function() {
-    $('nav').toggleClass('toggle');
-  });
-}
+  projectView.handleMainNav = function() {
+    $('.main-nav').on('click', '.tab', function() {
+      $('.hero-container').hide();
+      $('.tab-content').hide();
+      $('.' + $(this).data('content')).show();
+      $('.template').hide();
+    });
+  };
 
-projectView.initNewProjectPage = function() {
-  $('.tab-content').show();
+  function hamburgerClick() {
+    $('.icon-menu').on('click', function() {
+      $('nav').toggleClass('toggle');
+    });
+  }
 
-  $('#export-field').hide();
-  $('project-json').on('focus', function() {
-    this.select();
-  });
+  projectView.initNewProjectPage = function() {
+    $('.tab-content').show();
 
-  $('#new-form').on('change', 'input, textarea', projectView.create);
-}
+    $('#export-field').hide();
+    $('project-json').on('focus', function() {
+      this.select();
+    });
 
-projectView.create = function() {
-  var project;
-  $('#projects').empty();
+    $('#new-form').on('change', 'input, textarea', projectView.create);
+  }
 
-  project = new Project({
-    projectName: $('#project-title').val(),
-    description: $('#project-description').val(),
-    siteUrl: $('#project-url').val(),
-    siteRepo: $('#project-repo').val()
-  });
+  projectView.create = function() {
+    var project;
+    $('#projects').empty();
 
-  console.log(this.siteRepo);
+    project = new Project({
+      projectName: $('#project-title').val(),
+      description: $('#project-description').val(),
+      siteUrl: $('#project-url').val(),
+      siteRepo: $('#project-repo').val()
+    });
 
-  $('#projects').append(project.toHtml());
+    console.log(this.siteRepo);
 
-  $('pre code').each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
+    $('#projects').append(project.toHtml());
 
-  $('#export-field').show();
-  $('#project-json').val(JSON.stringify(project) + ',');
-}
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+
+    $('#export-field').show();
+    $('#project-json').val(JSON.stringify(project) + ',');
+  }
 
 
-projectView.initIndexPage = function() {
-  hamburgerClick();
-  projectView.handleMainNav();
-}
+  projectView.initIndexPage = function() {
+    hamburgerClick();
+    projectView.handleMainNav();
+  }
+
+  module.projectView = projectView;
+} (app));
