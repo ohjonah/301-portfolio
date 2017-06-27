@@ -54,7 +54,6 @@ var app = app || {};
     $('#project-json').val(JSON.stringify(project) + ',');
   }
 
-
   projectView.initIndexPage = function() {
     hamburgerClick();
     projectView.handleMainNav();
