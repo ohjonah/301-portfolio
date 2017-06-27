@@ -4,7 +4,7 @@ var app = app || {};
 
 (function(module) {
 
-  var projects = [];
+
 
   function Project(rawDataObj) {
     this.projectName = rawDataObj.projectName;
@@ -21,10 +21,10 @@ var app = app || {};
 
   Project.loadAll = function(rawData) {
 
-    rawData.map(function(projectObject) {
-      projects.push(new Project(projectObject));
-    })
-    projects.map(function(project) {
+    var projects = rawData.map((projectObject) =>
+      new Project(projectObject));
+
+    projects.forEach(function(project) {
       $('#projects').append(project.toHtml());
     })
   }
