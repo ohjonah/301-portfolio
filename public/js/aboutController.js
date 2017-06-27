@@ -7,7 +7,9 @@ var app = app || {};
 
   aboutController.index = () => {
     $('.hero-container').hide();
-    $('.tab-content').hide();
+    $('.projects').hide();
+    $('#projects').hide();
+    $('.reduce').hide();
     $('.about-me').show();
   };
 

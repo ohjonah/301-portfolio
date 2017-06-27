@@ -6,7 +6,9 @@ var app = app || {};
   const projectController = {};
 
   projectController.index = () => {
-    $('main').hide();
+    $('.hero-container').hide();
+    $('#article').hide();
+    $('.reduce').hide();
     $('.projects').show();
     $('#projects').show();
   };
