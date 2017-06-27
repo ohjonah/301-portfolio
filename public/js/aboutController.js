@@ -6,7 +6,8 @@ var app = app || {};
   const aboutController = {};
 
   aboutController.index = () => {
-    $('main').hide();
+    $('.hero-container').hide();
+    $('.tab-content').hide();
     $('.about-me').show();
   };
 

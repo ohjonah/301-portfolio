@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-(cuntion(module) {
+(function(module) {
   const projectController = {};
 
   projectController.index = () => {
