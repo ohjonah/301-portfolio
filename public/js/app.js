@@ -19,14 +19,11 @@ var app = app || {};
     return templateRender(this);
   };
 
+  var template = $('#project-overlay').html();
+  let render = Handlebars.compile(template);
+
   Project.loadAll = function(rawData) {
-
-    var projects = rawData.map((projectObject) =>
-      new Project(projectObject));
-
-    projects.forEach(function(project) {
-      $('#projects').append(project.toHtml());
-    });
+    $('#projects').append(rawData.map(render));
 
     var randomArrayThatIWantToSumForPoints = [2, 3, 4, 3, 2, 3, 4, 5, 6, 7, 4];
 
@@ -42,14 +39,7 @@ var app = app || {};
       Project.loadAll(JSON.parse(localStorage.rawData));
       app.projectView.initIndexPage();
     } else {
-      $.getJSON('./data/rawData.json')
-      .then(function(data) {
-        localStorage.rawData = JSON.stringify(data);
-        Project.loadAll(data);
-        app.projectView.initIndexPage();
-      }, function(err) {
-        console.error('my stuff broke:', err);
-      });
+      app.repos.requestRepos(app.projectView.initIndexPage);
     }
   }
 

@@ -5,12 +5,18 @@ var app = app || {};
 
   repos.all = [];
 
-  repos.requestRepos = () =>
+  repos.requestRepos = function(callback) {
     $.ajax({
       url: 'https://api.github.com/user/repos',
       headers: {'Authorization': `token ${githubToken}`},
       method: 'GET'
-    }).then((data) => repos.all = data);
+    }).then(function(data) {
+      repos.all = data;
+      localStorage.rawData = JSON.stringify(data);
+      app.Project.loadAll(data);
+      callback();
+    })
+  }
 
   module.repos = repos;
 })(app);
