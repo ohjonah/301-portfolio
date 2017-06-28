@@ -5,15 +5,6 @@ var app = app || {};
 
   var projectView = {};
 
-  projectView.handleMainNav = function() {
-    $('.main-nav').on('click', '.tab', function() {
-      $('.hero-container').hide();
-      $('.tab-content').hide();
-      $('.' + $(this).data('content')).show();
-      $('.template').hide();
-    });
-  };
-
   function hamburgerClick() {
     $('.icon-menu').on('click', function() {
       $('nav').toggleClass('toggle');
@@ -56,7 +47,6 @@ var app = app || {};
 
   projectView.initIndexPage = function() {
     hamburgerClick();
-    projectView.handleMainNav();
   }
 
   module.projectView = projectView;
