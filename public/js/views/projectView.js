@@ -23,17 +23,8 @@ var app = app || {};
   }
 
   projectView.create = function() {
-    var project;
+    var project = app.repos.all;
     $('#projects').empty();
-
-    project = new Project({
-      projectName: $('#project-title').val(),
-      description: $('#project-description').val(),
-      siteUrl: $('#project-url').val(),
-      siteRepo: $('#project-repo').val()
-    });
-
-    console.log(this.siteRepo);
 
     $('#projects').append(project.toHtml());
 
