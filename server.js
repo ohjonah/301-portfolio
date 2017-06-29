@@ -6,8 +6,7 @@ const PORT = process.env.Port || 8080;
 
 app.use(express.static('./public'));
 
-app.get('/', function(req, rest) {
-  console.log('whats up');
+app.get('/', function(req, res) {
   res.sendFile('./index.html');
 });
 

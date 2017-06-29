@@ -26,10 +26,6 @@ var app = app || {};
     $('#projects').append(rawData.map(render));
 
     var randomArrayThatIWantToSumForPoints = [2, 3, 4, 3, 2, 3, 4, 5, 6, 7, 4];
-
-    var myPoints = randomArrayThatIWantToSumForPoints.reduce((a, b) => a + b);
-
-    $('#insert-reduce-method-here').append(myPoints);
   }
 
 

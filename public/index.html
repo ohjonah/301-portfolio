@@ -34,7 +34,7 @@
 
       <nav class="main-nav">
         <ul>
-          <li class="tab" data-content="home"><a href="/">Home</a></li>
+          <li class="tab" data-content="home"><a href="/home">Home</a></li>
           <li class="tab" data-content="projects"><a href="/projects">Projects</a></li>
           <li><a href="https://github.com/ohjonah">Github</a></li>
           <li class="tab" data-content="about-me"><a href="/about">About</a></li>
@@ -60,10 +60,6 @@
         <h3>About</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </article>
-
-      <article class="reduce tab-content">
-        <h3 id="insert-reduce-method-here">My Reduce Method =  </h3>
-      </article>
     </main>
 
     <footer>
@@ -72,20 +68,20 @@
       <a href="https://github.com/ohjonah"><span class="icon-github"></span></a>
     </footer>
 
-    <script src="/js/githubToken.js"></script>
+    <script src="/js/models/githubToken.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js"></script>
-    <script src="./js/projectView.js"></script>
-    <script src="./js/repo.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="./js/views/projectView.js"></script>
+    <script src="./js/models/repo.js"></script>
+    <script src="./js/models/app.js"></script>
     <script>
       app.Project.fetchAll();
     </script>
     <script src="./vendor/scripts/page.js"></script>
-    <script src="./js/projectController.js"></script>
-    <script src="./js/aboutController.js"></script>
-    <script src="./js/routes.js"></script>
+    <script src="./js/controllers/projectController.js"></script>
+    <script src="./js/controllers/aboutController.js"></script>
+    <script src="./js/controllers/routes.js"></script>
   </body>
 
 </html>
