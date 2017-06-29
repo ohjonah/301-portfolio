@@ -22,7 +22,7 @@ app.get('/*', function(req, res) {
 });
 
 app.get('/new', function(req, res) {
-  res.SendFile('./new.html', {root: './public'});
+  res.sendFile('./new.html', {root: './public'});
 });
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
