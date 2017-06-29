@@ -25,7 +25,6 @@ var app = app || {};
   Project.loadAll = function(rawData) {
     $('#projects').append(rawData.map(render));
 
-    var randomArrayThatIWantToSumForPoints = [2, 3, 4, 3, 2, 3, 4, 5, 6, 7, 4];
   }
 
 
