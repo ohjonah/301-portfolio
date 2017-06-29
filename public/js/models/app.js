@@ -34,6 +34,8 @@ var app = app || {};
     if (localStorage.rawData) {
       Project.loadAll(JSON.parse(localStorage.rawData));
       app.projectView.initIndexPage();
+      $('.hero-container').show();
+      $('.about-me').show();
     } else {
       app.repos.requestRepos(app.projectView.initIndexPage);
     }
