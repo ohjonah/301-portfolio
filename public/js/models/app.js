@@ -3,9 +3,6 @@
 var app = app || {};
 
 (function(module) {
-
-
-
   function Project(rawDataObj) {
     this.projectName = rawDataObj.projectName;
     this.description = rawDataObj.description;
@@ -24,11 +21,7 @@ var app = app || {};
 
   Project.loadAll = function(rawData) {
     $('#projects').append(rawData.map(render));
-
-    var randomArrayThatIWantToSumForPoints = [2, 3, 4, 3, 2, 3, 4, 5, 6, 7, 4];
   }
-
-
 
   Project.fetchAll = function() {
     if (localStorage.rawData) {
@@ -41,5 +34,5 @@ var app = app || {};
     }
   }
 
-module.Project = Project;
+  module.Project = Project;
 } (app));
